@@ -68,7 +68,7 @@
       <section class="hero hero-bcg">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="hero-button">Замовити послугу</button>
+          <button type="button" class="hero-button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <!--Особлівости-->
@@ -128,7 +128,12 @@
         <div class="container">
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="task-list list">
-            <li class="task-img"><img src="./photo/img.jpg" alt="програмування" width="370" /></li>
+            <li class="task-img">
+              <div class="task-thumb">
+                <img src="./photo/img.jpg" alt="програмування" width="370" />
+                <p class="task-text">Десктопні додатки</p>
+              </div>
+            </li>
             <li class="task-img">
               <img src="./photo/img-2.jpg" alt="мобільні додатки" width="370" />
             </li>
@@ -384,5 +389,11 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close>Close</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

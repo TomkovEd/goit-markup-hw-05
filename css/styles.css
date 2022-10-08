@@ -305,7 +305,27 @@ body {
   left: 215px;
   top: 1058px;
 }
+.task-thumb {
+  position: relative;
+}
 
+.task-text {
+  width: 370px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  background: rgba(47, 48, 58, 0.8);
+
+  position: absolute;
+  bottom: 0px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--bot-logo-colour);
+}
 .task-img:last-child {
   margin-right: 0px;
 }
@@ -582,4 +602,31 @@ body {
   font-size: 16px;
   line-height: 1.88;
   color: var(--secondary-text-colour);
+}
+
+/*-----------BACKDROP----------*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000001a;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-height: 581px;
+  min-width: 528px;
+  background-color: var(--bot-logo-colour);
 }
