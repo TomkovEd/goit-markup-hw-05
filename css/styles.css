@@ -692,8 +692,23 @@ transition:var(--timeing-funktion);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 8px;
 
   min-height: 581px;
   min-width: 528px;
   background-color: var(--bot-logo-colour);
 }
+
+.modal-close-button{display:flex;
+ align-items: center;
+ justify-content: center;
+ margin-left: auto;
+ width: 30px;
+ height: 30px;
+ border-radius: 50%;
+ border: 1px solid #0000001A;
+ background-color:var(--bot-logo-colour);
+}
+
+.close-icon{
+fill:#000000;}
