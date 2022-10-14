@@ -11,7 +11,7 @@
   --bot-logo-colour: #ffffff;
   --title-colour: #212121;
   --port-btn-bcg-colour: #f5f4fa;
-  --timeing-funktion: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; 
+  --timeing-funktion: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 * {
@@ -132,7 +132,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-colour);
-transition: var(--timeing-funktion);
+  transition: var(--timeing-funktion);
 }
 .header-item {
   margin-right: 50px;
@@ -154,7 +154,7 @@ transition: var(--timeing-funktion);
   width: 100%;
   height: 4px;
   background-color: var(--buttom-colour);
-  transition:var(--timeing-funktion);
+  transition: var(--timeing-funktion);
 }
 
 .header-link:hover,
@@ -183,13 +183,13 @@ transition: var(--timeing-funktion);
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--contacts-header-colour);
-  transition:var(--timeing-funktion);
+  transition: var(--timeing-funktion);
 }
 
 .header-contact-icon {
   margin-right: 10px;
   fill: currentColor;
-  transition:var(--timeing-funktion);
+  transition: var(--timeing-funktion);
 }
 
 .header-contact-link:hover,
@@ -253,7 +253,8 @@ transition: var(--timeing-funktion);
   border-radius: 4px;
   border: none;
 }
-.hero-button:focus{}
+.hero-button:focus {
+}
 /*--------------fEATURES--------------*/
 
 .visually-hidden {
@@ -418,7 +419,7 @@ transition: var(--timeing-funktion);
   align-items: center;
   justify-content: center;
   fill: #afb1b8;
-  transition:var(--timeing-funktion);
+  transition: var(--timeing-funktion);
 }
 .team-sn-link:hover,
 .team-sn-link:focus {
@@ -456,8 +457,8 @@ transition: var(--timeing-funktion);
 }
 
 .client-icon {
-  fill:currentColor;
-  transition:var(--timeing-funktion);
+  fill: currentColor;
+  transition: var(--timeing-funktion);
 }
 .client-link {
   display: flex;
@@ -467,9 +468,8 @@ transition: var(--timeing-funktion);
   width: 170px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition:var(--timeing-funktion);
+  transition: var(--timeing-funktion);
   color: var(--contacts-header-colour);
-  
 }
 
 .client-link:hover,
@@ -479,7 +479,7 @@ transition: var(--timeing-funktion);
 
 .client-link:hover .client-icon,
 .client-link:focus .client-icon {
-  fill:var(--accent-colour);
+  fill: var(--accent-colour);
 }
 
 /*----------FOOTER------------*/
@@ -513,7 +513,7 @@ transition: var(--timeing-funktion);
   font-size: 14px;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
-  transition:var(--timeing-funktion);
+  transition: var(--timeing-funktion);
 }
 .footer-link:hover,
 .footer-link:focus {
@@ -551,7 +551,7 @@ transition: var(--timeing-funktion);
   justify-content: center;
   background-color: #44454e;
   fill: var(--bot-logo-colour);
-  transition:var(--timeing-funktion);
+  transition: var(--timeing-funktion);
 }
 
 .social-link:hover,
@@ -588,7 +588,7 @@ transition: var(--timeing-funktion);
   background-color: var(--port-btn-bcg-colour);
   border-radius: 4px;
   border: none;
-  transition:var(--timeing-funktion);
+  transition: var(--timeing-funktion);
 }
 
 .port-btn:hover,
@@ -608,7 +608,9 @@ transition: var(--timeing-funktion);
 
   border: 1px solid #eeeeee;
 }
-.port-link{transition:var(--timeing-funktion);}
+.port-link {
+  transition: var(--timeing-funktion);
+}
 
 .port-link:hover,
 .port-link:focus {
@@ -647,15 +649,13 @@ transition: var(--timeing-funktion);
 
   color: var(--contacts-footer-colour);
 
-transition:var(--timeing-funktion);
-  opacity: 0;
-  pointer-events: none;
-  background-color:rgba(33, 150, 243, 0.9);
+  transition: var(--timeing-funktion);
+  background-color: rgba(33, 150, 243, 0.9);
 }
 .port-link:hover .overlay-text,
-.port-link:focus .overlay-text{opacity: 1;
-  transform:translateY(-100%);}
-
+.port-link:focus .overlay-text {
+  transform: translateY(-100%);
+}
 
 .port-title {
   margin-bottom: 4px;
@@ -697,18 +697,21 @@ transition:var(--timeing-funktion);
   min-height: 581px;
   min-width: 528px;
   background-color: var(--bot-logo-colour);
+  transition: var(--timeing-funktion);
 }
 
-.modal-close-button{display:flex;
- align-items: center;
- justify-content: center;
- margin-left: auto;
- width: 30px;
- height: 30px;
- border-radius: 50%;
- border: 1px solid #0000001A;
- background-color:var(--bot-logo-colour);
+.modal-close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #0000001a;
+  background-color: var(--bot-logo-colour);
 }
 
-.close-icon{
-fill:#000000;}
+.close-icon {
+  fill: #000000;
+}
