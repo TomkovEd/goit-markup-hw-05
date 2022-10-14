@@ -11,7 +11,7 @@
   --bot-logo-colour: #ffffff;
   --title-colour: #212121;
   --port-btn-bcg-colour: #f5f4fa;
-  --timeing-funktion: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  --timeing-funktion: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -132,7 +132,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-colour);
-  transition: var(--timeing-funktion);
+  transition: color var(--timeing-funktion) 0ms;
 }
 .header-item {
   margin-right: 50px;
@@ -154,7 +154,6 @@ body {
   width: 100%;
   height: 4px;
   background-color: var(--buttom-colour);
-  transition: var(--timeing-funktion);
 }
 
 .header-link:hover,
@@ -183,13 +182,13 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--contacts-header-colour);
-  transition: var(--timeing-funktion);
+  transition: color var(--timeing-funktion) 0ms;
 }
 
 .header-contact-icon {
   margin-right: 10px;
   fill: currentColor;
-  transition: var(--timeing-funktion);
+  transition: fill var(--timeing-funktion) 0ms;
 }
 
 .header-contact-link:hover,
@@ -419,7 +418,7 @@ body {
   align-items: center;
   justify-content: center;
   fill: #afb1b8;
-  transition: var(--timeing-funktion);
+  transition: fill var(--timeing-funktion) 0ms, background-color var(--timeing-funktion) 0ms;
 }
 .team-sn-link:hover,
 .team-sn-link:focus {
@@ -458,7 +457,7 @@ body {
 
 .client-icon {
   fill: currentColor;
-  transition: var(--timeing-funktion);
+  transition: fill var(--timeing-funktion) 0ms;
 }
 .client-link {
   display: flex;
@@ -468,7 +467,7 @@ body {
   width: 170px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition: var(--timeing-funktion);
+  transition: border var(--timeing-funktion) 0ms;
   color: var(--contacts-header-colour);
 }
 
@@ -513,7 +512,7 @@ body {
   font-size: 14px;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
-  transition: var(--timeing-funktion);
+  transition: color var(--timeing-funktion) 0ms;
 }
 .footer-link:hover,
 .footer-link:focus {
@@ -551,7 +550,7 @@ body {
   justify-content: center;
   background-color: #44454e;
   fill: var(--bot-logo-colour);
-  transition: var(--timeing-funktion);
+  transition: background-color var(--timeing-funktion) 0ms;
 }
 
 .social-link:hover,
@@ -588,7 +587,8 @@ body {
   background-color: var(--port-btn-bcg-colour);
   border-radius: 4px;
   border: none;
-  transition: var(--timeing-funktion);
+  transition: background-color var(--timeing-funktion) 0ms, color var(--timeing-funktion) 0ms,
+    box-shadow var(--timeing-funktion) 0ms;
 }
 
 .port-btn:hover,
@@ -609,12 +609,13 @@ body {
   border: 1px solid #eeeeee;
 }
 .port-link {
-  transition: var(--timeing-funktion);
+  display: block;
+
+  transition: all var(--timeing-funktion) 0ms;
 }
 
 .port-link:hover,
 .port-link:focus {
-  display: block;
   box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f;
 }
 
@@ -636,8 +637,6 @@ body {
 .overlay-text {
   padding: 63px 24px;
   position: absolute;
-  top: 100%;
-
   width: 100%;
   height: 100%;
   font-style: normal;
@@ -646,10 +645,10 @@ body {
   line-height: 1.55;
   letter-spacing: 0.03em;
   text-align: left;
-
   color: var(--contacts-footer-colour);
+  transform: translateY(100%);
 
-  transition: var(--timeing-funktion);
+  transition: transform var(--timeing-funktion) 0ms;
   background-color: rgba(33, 150, 243, 0.9);
 }
 .port-link:hover .overlay-text,
@@ -680,6 +679,8 @@ body {
   width: 100%;
   height: 100%;
   background-color: #0000001a;
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .backdrop.is-hidden {
@@ -687,17 +688,21 @@ body {
   pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   padding: 8px;
 
   min-height: 581px;
   min-width: 528px;
   background-color: var(--bot-logo-colour);
-  transition: var(--timeing-funktion);
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--timeing-funktion) 0ms;
 }
 
 .modal-close-button {
